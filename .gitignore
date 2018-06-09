@@ -1,0 +1,82 @@
+# Python Bytecode
+*.py[co]
+__pycache__
+.cache/
+
+# DB Files
+sqlite3.db
+db.sqlite3
+
+# Settings
+{{project_name}}/settings/local.py
+
+# Static
+{{project_name}}/public/*
+{{project_name}}/static/*
+{{project_name}}/media/*
+
+# Coverage
+.coverage
+.coverage_html
+htmlcov/
+
+# Logs
+*.log
+
+# NPM
+npm-debug.log
+node_modules/
+
+python3.6         
+easy_install 
+wheel           
+activate.csh    
+ django-admin
+python3@         
+pip3.6       
+python-config   
+activate      
+python@        
+pip3        
+activate_this.py 
+/ __pycache__/
+easy_install-3.6  pip        
+ activate.fish     
+django-admin.py
+
+*/settings/local.py
+*.py[co]
+*.sw[po]
+*.egg*
+.coverage
+pip-log.txt
+docs/_gh-pages
+build.py
+build
+.DS_Store
+.noseids
+tmp/*
+*.swp
+*~
+*.mo
+*.log
+*.db
+db/*
+test_db/
+.vagrant
+*.sublime-project
+*.sublime-workspace
+media/*
+static/*
+config/
+.idea/
+
+activate.fish
+django-admin
+easy_install-3.6
+pip
+python
+python3
+
+
+
