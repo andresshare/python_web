@@ -19,8 +19,11 @@ from app_login import views
 from app_contacto import views
 
 
+
 urlpatterns = [
+
     url(r'^contacto/', views.contacto, name = "contacto"),
     url(r'^login/', include('app_login.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.index, name="index")
 ]
