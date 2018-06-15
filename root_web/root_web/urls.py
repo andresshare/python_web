@@ -21,9 +21,9 @@ from app_contacto import views
 
 
 urlpatterns = [
-
+    url(r'^$', views.index, name="index"),
     url(r'^contacto/', views.contacto, name = "contacto"),
     url(r'^login/', include('app_login.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index, name="index")
+
 ]

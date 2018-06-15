@@ -1,7 +1,11 @@
 from django.conf.urls import url
-from app_login import views
+from app_contacto import views
 
 
 urlpatterns = [
-    url(r'^$', views.login, name="login")
+    url(r'^$', views.contacto, name="contacto")
 ]
+
+
+
+
