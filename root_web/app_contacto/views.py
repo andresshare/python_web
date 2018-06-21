@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+#from django.http import HttpResponse
 from . import forms
-from app_contacto.models import Topic, Webpage, AccessRecord
+from app_contacto.forms import NewUserForm
+from app_contacto.models import Topic, Webpage, AccessRecord,Users
 
 
 # Create your views here.
@@ -28,3 +29,16 @@ def form_name_view(request):
             print("EMAIL:" + form.cleaned_data['email'])
             print("TEXT:"+form.cleaned_data['text'])
     return render(request,"basicapp/form_page.html", {'form':form})
+
+
+def users(request):
+    form = NewUserForm()
+    if request.method == 'POST':
+        form = NewUserForm(request.POST)
+        if form.is_valid():
+            form.save(commit=True)
+            return index(request)
+        else:
+            print('Error FORM INVALID')
+
+    return render(request,"basicapp/form_page.html",{"form":form})

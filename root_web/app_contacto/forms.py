@@ -1,5 +1,6 @@
 from django import forms
 from django.core import validators
+from app_contacto.models import Users
 
 # def check_for_z(value):
 #     if value[0].lower() != 'z':
@@ -30,6 +31,11 @@ def clean():
 #         raise forms.ValidationError("GOTCHA BOT")
 #     return botcatcher
 
+
+class NewUserForm(forms.ModelForm):
+    class Meta():
+        model = Users
+        fields = '__all__'
 
 
 

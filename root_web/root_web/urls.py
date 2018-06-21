@@ -22,9 +22,9 @@ from app_contacto import views
 
 urlpatterns = [
     url(r'^$', views.index, name = "index"),
-    url(r'^formpage/', views.form_name_view, name='form_name_view'),
+    url(r'^formpage/', views.form_name_view, name = 'form_name_view'),
     url(r'^contacto/', views.contacto, name = "contacto"),
+    url(r'^formbd/', include('app_contacto.urls')),
     url(r'^login/', include('app_login.urls')),
     url(r'^admin/', admin.site.urls),
-
 ]
