@@ -42,3 +42,6 @@ def users(request):
             print('Error FORM INVALID')
 
     return render(request,"basicapp/form_page.html",{"form":form})
+
+def relative(request):
+    return render(request, "basicapp/relative_url.html", {"form": form})
