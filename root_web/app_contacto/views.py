@@ -43,5 +43,14 @@ def users(request):
 
     return render(request,"basicapp/form_page.html",{"form":form})
 
+def index_basicapp(request):
+    return render(request,"basicapp/index.html",{})
+
 def relative(request):
-    return render(request, "basicapp/relative_url.html", {"form": form})
+    return render(request, "basicapp/relative_url.html")
+
+def other(request):
+    return render(request, "basicapp/other.html")
+
+
+
