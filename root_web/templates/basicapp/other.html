@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends "basicapp/base.html" %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,5 +10,10 @@
 <body>
     <p>Welcome to OTHER</p>
     <a href="basicapp/other.html">The other page</a>
+
+{% block body_block %}
+    <h1>TEXT</h1>
+    <p>{% lorem 3 %}</p>
+{% endblock %}
 </body>
 </html>
