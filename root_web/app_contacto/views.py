@@ -44,7 +44,8 @@ def users(request):
     return render(request,"basicapp/form_page.html",{"form":form})
 
 def index_basicapp(request):
-    return render(request,"basicapp/index.html",{})
+    context_dict ={'text': 'hello world ', 'number':100}
+    return render(request,"basicapp/index.html",context_dict)
 
 def relative(request):
     return render(request, "basicapp/relative_url.html")
