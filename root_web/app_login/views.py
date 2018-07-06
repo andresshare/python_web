@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app_login.forms import userForm, UserProfileInfoForm
+from app_login.forms import UserForm, UserProfileInfoForm
 # Create your views here.
 
 def login(request):
@@ -24,7 +24,7 @@ def register(request):
             if 'profile_pic' in request.FILES:
                 profile.profile_pic = request.FILES['profile_pic']
                 profile.save()
-                register = True
+                registered = True
         else:
             print(user_form.errors,profile_form.errors)
 
