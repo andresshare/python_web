@@ -30,5 +30,9 @@ urlpatterns = [
     url(r'^login/', include('app_login.urls')),
     url(r'^basicapp/', include('app_contacto.urls')),
     url(r'^app_login/', include('app_login.urls')),
+    url(r'^logout/', include('app_login.urls')),
+    url(r'^special/', include('app_login.urls')),
+    #url(r'^logout/$', views.user_logout, name="logout"),
+    #url(r'^special/', views.special, name="special"),
     url(r'^admin/', admin.site.urls),
 ]

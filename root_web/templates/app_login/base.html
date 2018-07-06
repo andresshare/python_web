@@ -33,8 +33,13 @@
                     </a>
                 </li>
             </ul>
-
-        </div>
+            {% if user.is_authenticated%}
+            <li> <a class="navbar-link" href="{% url 'logout' %}"></a> logout </li>
+            {%else%}
+            <li>
+                <a class="navbar-link" href="{% url 'basic_app:user_login' %}">Login</a></li>
+            {% endif %}
+            </div>
     </nav>
 
 <div class="container">
